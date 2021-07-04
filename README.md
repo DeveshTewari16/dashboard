@@ -1,3 +1,5 @@
+#Basic application using react js. Currently working on implementing react js concepts like states and props
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
