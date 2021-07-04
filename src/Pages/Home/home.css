@@ -1,0 +1,23 @@
+.home{
+    width: 100%;
+    height: 100%;
+    flex: 3;
+    margin-top: 15px;
+    padding: 5px;
+    align-content: center;
+
+}
+
+.featureInfo{
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.charts{
+    padding:10px;
+    height:55%;
+    width: 100%;
+
+}
