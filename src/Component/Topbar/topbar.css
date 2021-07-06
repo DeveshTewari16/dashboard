@@ -4,7 +4,7 @@
     background-color: white;
     position: sticky;
     top :0px;
-    z-index: 999px;
+    z-index: 999;
 }
 
 .topbarWrapper{
