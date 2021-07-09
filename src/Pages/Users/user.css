@@ -1,0 +1,20 @@
+.data{
+    flex: 4;
+    height:100%;
+
+}
+.editButton{
+    background-color:#90EE90;
+    align-content: center;
+    cursor: pointer;
+}
+.delete{
+    align-content: center;
+    color:red;
+    align-content: center;
+    cursor: pointer;
+}
+
+.editDelete{
+    align-content: center;
+}
