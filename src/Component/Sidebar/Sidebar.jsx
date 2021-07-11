@@ -16,20 +16,19 @@ export default function Sidebar() {
                     <h3 className="sideTittle">Dashboard</h3>
                         <ul className="sidebarList" >
                             <li className="itemlistName" ><LineStyle name="home" className="sidebarIcon" /><a href="/home">Home</a></li>
-                            <li className="itemlistName"><Timeline className="sidebarIcon"/>Anlaytics</li>
+                            <li className="itemlistName"><Timeline className="sidebarIcon"/><Link to="/analytics">Anlaytics</Link></li>
                             <li className="itemlistName"><TrendingUp className="sidebarIcon"/>< a href="/users">User details</a></li>
             
                             </ul>
                     <h3 className="sideTittle">Quick Menu</h3>
                         <ul className="sidebarList">
                             <li className="itemlistName" ><Person className="sidebarIcon"/><Link to="/newuser">Users</Link> </li>
-                            <li className="itemlistName"><AddBox className="sidebarIcon"/>Products</li>
-                            <li className="itemlistName"><AttachMoney className="sidebarIcon"/>Transaction History</li>
-                            <li className="itemlistName"><Assessment className="sidebarIcon"/>Reports</li>
+                            <li className="itemlistName"><AddBox className="sidebarIcon"/><Link to="/products">Products</Link></li>
+                            <li className="itemlistName"><AttachMoney className="sidebarIcon"/><Link to="/history">Transaction History</Link></li>
+                            <li className="itemlistName"><Assessment className="sidebarIcon"/><Link to="/reports">Reports</Link></li>
                         </ul>
                     <h3 className="sideTittle">Admin</h3>
                         <ul className="sidebarList">
-                            <li className="itemlistName"><AddBox className="sidebarIcon"/>Add Members</li>
                             <li className="itemlistName"><AccountTree className="sidebarIcon"/>Access</li>
                             <li className="itemlistName"><Group className="sidebarIcon"/>Group</li>
                             <li className="itemlistName"><Forum className="sidebarIcon"/>Messages</li>
@@ -38,9 +37,7 @@ export default function Sidebar() {
                         </ul>
                     <h3 className="sideTittle">Security</h3>
                         <ul className="sidebarList">
-                           <Link to="/passwordManagement"> <li className="itemlistName"><VpnKey className="sidebarIcon"/> Password</li></Link> 
-                            <li className="itemlistName"><AddBox className="sidebarIcon"/>Add Members</li>
-                            <li className="itemlistName"><AccountTree className="sidebarIcon"/>Access</li>
+                           <Link to="/passwordManagement"> <li className="itemlistName"><VpnKey className="sidebarIcon"/> Password Management</li></Link>                             <li className="itemlistName"><AccountTree className="sidebarIcon"/>Access</li>
                         </ul>
 
                 </div>
