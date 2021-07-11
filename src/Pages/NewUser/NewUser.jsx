@@ -1,28 +1,31 @@
 import React from 'react';
 import "./newuser.css";
-
+import {useState,useEffect} from 'react';
 import {
-    CalendarToday,
-    LocationSearching,
-    MailOutline,
-    PermIdentity,
-    PhoneAndroid,
-    Publish,
+    Publish
   } from "@material-ui/icons";
-  import { Link } from "react-router-dom";
+  
 
 export default function NewUser() {
+
+  const[formData,setFormData]=useState({});
+
+ 
+  const handleSubmit=(event)=>{
+    console.log('Submit clicked'); 
+    
+  }
     return (
         <div className="NewUser">
         <div className="userUpdate">
           <span className="userUpdateTitle">Create New User</span>
-          <form className="userUpdateForm">
-            <div className="userUpdateLeft">
+          <form className="userUpdateForm" onSubmit={handleSubmit} >
+            <div className="userUpdateLeft" >
               <div className="userUpdateItem">
-                <label>Username</label>
+                <label>UserId</label>
                 <input
                   type="text"
-                  placeholder="devesh"
+                  placeholder="1, 2, 212"
                   className="userUpdateInput"
                 />
               </div>
@@ -31,13 +34,13 @@ export default function NewUser() {
                 <input
                   type="text"
                   placeholder="Devesh Tewari"
-                  className="userUpdateInput"
+                  className="userUpdateInput" 
                 />
               </div>
               <div className="userUpdateItem">
                 <label>Email</label>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="devesh@gmail.com"
                   className="userUpdateInput"
                 />
