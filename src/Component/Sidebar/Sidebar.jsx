@@ -38,7 +38,7 @@ export default function Sidebar() {
                         </ul>
                     <h3 className="sideTittle">Security</h3>
                         <ul className="sidebarList">
-                            <li className="itemlistName"><VpnKey className="sidebarIcon"/> Password</li>
+                           <Link to="/passwordManagement"> <li className="itemlistName"><VpnKey className="sidebarIcon"/> Password</li></Link> 
                             <li className="itemlistName"><AddBox className="sidebarIcon"/>Add Members</li>
                             <li className="itemlistName"><AccountTree className="sidebarIcon"/>Access</li>
                         </ul>

@@ -8,6 +8,7 @@ import { userData } from './userdata';
 import User from './Pages/Users/User.jsx';
 import UserPageDetails from './Pages/UserPageDetails/UserPageDetails';
 import NewUser from './Pages/NewUser/NewUser.jsx'; 
+import Password from './Pages/Password/Password.jsx';
 
 function App() {
   return (
@@ -31,6 +32,12 @@ function App() {
         </Route>      
       <Route exact path='/UserPageDetails/:userId'>
       <UserPageDetails/>
+      </Route>
+      <Route exact path="/passwordManagement/:user_id">
+      <Password/>
+      </Route>
+      <Route exact path="/passwordManagement">
+      <Password/>
       </Route>
       </Switch>
       </div>

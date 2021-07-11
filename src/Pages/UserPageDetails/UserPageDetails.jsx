@@ -14,7 +14,7 @@ export default function User() {
   return (
     <div className="user">
       <div className="userTitleContainer">
-        <h1 className="userTitle">Edit User Details</h1>
+        <h1 className="userTitle">Edit User Data</h1>
         <Link to="/newUser">
           <button className="userAddButton">Create</button>
         </Link>
