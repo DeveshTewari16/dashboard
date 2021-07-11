@@ -2,9 +2,11 @@ const express=require('express');
 var cors = require('cors');
 const app=express();
 const mysql=require('mysql2');
+const bodyparser=require('body-parser');
 
-
-app.use(cors())
+app.use(cors());
+app.use(express.json());
+app.use(bodyparser.urlencoded({extended:true}));
 
 const db=mysql.createConnection({
 host:"localhost",
@@ -13,18 +15,20 @@ password:"12345",
 database:"CrudDatabase"
 });
 
+app.post('/api/insert',(req,res)=>{
+    userId=req.body.userId;
+    fullName=req.body.fullName;
+    email=req.body.email;
+    phone=req.body.phone;
+    address=req.body.address;
 
-
-
-app.get('/',(req,res)=>{
-    const sqlStatement="Insert into user_details(User_id,full_name,email,phone,address) values ('2','API TEST','test@test.com',435555552,'Test address')";
-    db.query(sqlStatement,(err,result)=>{
+    sqlInsert="Insert into user_details values (?,?,?,?,?)";
+    db.query(sqlInsert,[userId,fullName,email,phone,address],(err,result)=>{
         if (err) console.log(err);
-        res.send('API HIT');
-        console.log('Response sent');
-    })
-    db.end();
-})
+        return ('Data Inserted Successfully');
+    });
+});
+
 app.get('/update',(req,res)=>{
     //console.log(req.get('name'));
 

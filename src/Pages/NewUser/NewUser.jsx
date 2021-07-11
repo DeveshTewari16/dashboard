@@ -1,20 +1,29 @@
 import React from 'react';
 import "./newuser.css";
-import {useState,useEffect} from 'react';
+import {useState,useEffect,Ax} from 'react';
 import {
     Publish
   } from "@material-ui/icons";
+import Axios from 'axios';
   
 
 export default function NewUser() {
 
-  const[formData,setFormData]=useState({});
-
+  const[userId,setuserId]=useState('');
+  const[fullName,setfullName]=useState('');
+  const[email,setEmail]=useState('');
+  const[phone,setPhone]=useState('');
+  const[address,setAddress]=useState('');
  
   const handleSubmit=(event)=>{
-    console.log('Submit clicked'); 
+    Axios.post("http://localhost:3001/api/insert",
+    {userId:userId,
+  fullName:fullName,
+email:email,phone:phone,address:address}).then(()=>{ 
+window.alert('Data Submitted');
+})
     
-  }
+};
     return (
         <div className="NewUser">
         <div className="userUpdate">
@@ -26,7 +35,10 @@ export default function NewUser() {
                 <input
                   type="text"
                   placeholder="1, 2, 212"
-                  className="userUpdateInput"
+                  name="userid" onChange={(e)=>{
+                    setuserId(e.target.value);
+                  }}
+                  className="userUpdateInput" 
                 />
               </div>
               <div className="userUpdateItem">
@@ -35,6 +47,9 @@ export default function NewUser() {
                   type="text"
                   placeholder="Devesh Tewari"
                   className="userUpdateInput" 
+                  name="fullname" onChange={(e)=>{
+                    setfullName(e.target.value);
+                  }}
                 />
               </div>
               <div className="userUpdateItem">
@@ -43,6 +58,9 @@ export default function NewUser() {
                   type="email"
                   placeholder="devesh@gmail.com"
                   className="userUpdateInput"
+                  name="email"  onChange={(e)=>{
+                    setEmail(e.target.value);
+                  }}
                 />
               </div>
               <div className="userUpdateItem">
@@ -51,6 +69,10 @@ export default function NewUser() {
                   type="text"
                   placeholder="+91929292929"
                   className="userUpdateInput"
+                  name="phone"
+                  onChange={(e)=>{
+                    setPhone(e.target.value);
+                  }}
                 />
               </div>
               <div className="userUpdateItem">
@@ -59,6 +81,9 @@ export default function NewUser() {
                   type="text"
                   placeholder="India"
                   className="userUpdateInput"
+                  name="address"  onChange={(e)=>{
+                    setAddress(e.target.value);
+                  }}
                 />
               </div>
             </div>

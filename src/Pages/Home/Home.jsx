@@ -5,7 +5,6 @@ import FeatureInfo from '../../Component/featureInfo/FeatureInfo'
 import {userData} from '../../../src/userdata.js' ;
 import WidgetsLarge from '../../Component/WidgetsLarge/WidgetsLarge';
 import WidgetsSmall from '../../Component/WidgetsSmall/WidgetsSmall';
-import  {BrowserRouter as Router,Link,Switch,Route} from 'react-router-dom';
 
 export default function Home() {    
     var tittle ="Analytics Section"
